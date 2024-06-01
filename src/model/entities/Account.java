@@ -40,14 +40,14 @@ public class Account {
 		return balance;
 	}
 	
-	public void deposit(Double amount) throws DomainException {
+	public void deposit(double amount) throws DomainException {
 		if (amount < 0.0) {
 			throw new DomainException("The value cannot be negative!");
 		}
 		balance += amount;
 	}
 	
-	public void withdraw(Double amount) throws DomainException {
+	public void withdraw(double amount) throws DomainException {
 		if (withdrawLimit < amount) {
 			throw new DomainException("The amount exceeds withdraw limit"); 
 		}
